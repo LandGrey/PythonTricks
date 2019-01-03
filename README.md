@@ -15,11 +15,22 @@
 #### 非交互式执行代码
 
 ```python
-# code
-python -c "print('me')"
+# code-1
+python -c "import os;os.popen('calc')"
 
-# output
-me
+# note-1
+打开计算器(Windows 操作系统)
+
+
+# code-2
+python -m timeit -n 1 -r 1 -s "import os" "import platform" "print(platform.system())" "os.popen('calc')"
+
+# output-2
+Windows
+1 loops, best of 1: 401 msec per loop
+
+# note-2
+最后会打开计算器(Windows 操作系统)
 ```
 
 
@@ -153,6 +164,9 @@ print(time.strftime("%Y%m%d-%H:%M:%S", time.localtime(time.time())))
 # code for python2
 [reload(__import__("YW50aWdyYXZpdHk=".decode("base64"))) for x in range(666)]
 
+# code for python3
+[__import__("imp").reload(__import__("antigravity")) for x in range(666)]
+
 # note
 一个内置彩蛋模块的"拒绝服务攻击", 谨慎运行!
 ```
@@ -167,6 +181,18 @@ exec("print('love ' + s)", {'s': 'peace'})
 
 # output
 love peace
+```
+
+
+
+#### join 连接
+
+```python
+# code
+print("+".join(['L', 'G', '007']))
+
+# output
+L+G+007
 ```
 
 
@@ -246,18 +272,6 @@ OrderedDict([('apple', 1), ('tomato', 2), ('orange', 3), ('banana', 4)])
 
 # note-3
 无序字典变有序字典 (按 value 排序)
-```
-
-
-
-#### join 连接
-
-```python
-# code
-print("+".join(['L', 'G', '007']))
-
-# output
-L+G+007
 ```
 
 
