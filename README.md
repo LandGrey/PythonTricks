@@ -4,11 +4,42 @@
 >
 > 主要目的是备忘与分享.
 
----
 
 
+[**目录结构**](#Code Tricks For Python)
 
-[TOC]
+- [**命令行**](#命令行)
+  - [非交互式执行代码](#非交互式执行代码)
+  - [简易 HTTP Server](#简易 HTTP Server)
+
+- [**一行代码**](#一行代码)
+  - [最值](#最值)
+  - [逆序](#逆序)
+  - [碾平](#碾平)
+  - [真假](#真假)
+  - [去重](#去重)
+  - [时间戳](#时间戳)
+  - [彩蛋攻击](#彩蛋攻击)
+  - [执行代码](#执行代码)
+  - [join 连接](#join 连接)
+  - [简易判断](#简易判断)
+  - [条件过滤](#条件过滤)
+  - [排序技巧](#排序技巧)
+  - [字典合并](#字典合并)
+  - [列表推导式](#列表推导式)
+  - [zip分配生成dict](#zip分配生成dict)
+  - [switch-case 写法](#switch-case 写法)
+
+- [**代码片段**](#代码片段)
+  - [从右向左替换字符串](#从右向左替换字符串)
+
+- [**相关内容**](#相关内容)
+  - [PyTricks](https://github.com/brennerm/PyTricks)
+  - [wtfpython](https://github.com/satwikkansal/wtfpython)
+  - [code-snippets-python](https://github.com/binderclip/code-snippets-python)
+  - [writing_solid_python_code](https://l1nwatch.gitbooks.io/writing_solid_python_code_gitbook/)
+
+
 
 ## 命令行
 
@@ -69,14 +100,14 @@ print(heapq.nlargest(2, [{'S': 5, 'H': 3}, {'S': 7, 'H': 1}, {'S': 0, 'H': 2}], 
 #### 逆序
 
 ```python
-# code-1 字符串逆序
-print("LandGrey"[::-1])
+# code-1 reversed 逆序
+print(list(reversed(['L', 'G', 'PK'])))
 
 # output-1
-yerGdnaL
+['PK', 'G', 'L']
 
 
-# code-2 列表逆序
+# code-2 Slice 逆序
 print(['L', 'G', 'PK'][::-1])
 
 # output-2
@@ -326,6 +357,26 @@ print(dict(zip('AABCD', xrange(5))))
 
 
 
+#### switch-case 写法
+
+```python
+# code
+def switch(case):
+    return {
+        0: ">",
+        1: "<",
+        2: "="
+    }.get(case, "?")
+
+
+print(switch(1))
+
+# output
+<
+```
+
+
+
 ## 代码片段
 
 #### 从右向左替换字符串
@@ -348,10 +399,11 @@ lemon tre3
 
 
 
-## 类似项目
+## 相关内容
 
-[**PyTricks**](https://github.com/brennerm/PyTricks)
+- [**PyTricks**](https://github.com/brennerm/PyTricks)
+- [**wtfpython**](https://github.com/satwikkansal/wtfpython)
 
-[**wtfpython**](https://github.com/satwikkansal/wtfpython)
+- [**code-snippets-python**](https://github.com/binderclip/code-snippets-python)
+- [**writing_solid_python_code**](https://l1nwatch.gitbooks.io/writing_solid_python_code_gitbook/)
 
-[**code-snippets-python**](https://github.com/binderclip/code-snippets-python)
