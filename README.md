@@ -6,11 +6,11 @@
 
 
 
-[**目录结构**](#Code Tricks For Python)
+#### 目录结构
 
 - [**命令行**](#命令行)
   - [非交互式执行代码](#非交互式执行代码)
-  - [简易 HTTP Server](#简易 HTTP Server)
+  - [简易HTTPServer](#简易HTTPServer)
 
 - [**一行代码**](#一行代码)
   - [最值](#最值)
@@ -21,14 +21,14 @@
   - [时间戳](#时间戳)
   - [彩蛋攻击](#彩蛋攻击)
   - [执行代码](#执行代码)
-  - [join 连接](#join 连接)
+  - [join连接](#join连接)
   - [简易判断](#简易判断)
   - [条件过滤](#条件过滤)
   - [排序技巧](#排序技巧)
   - [字典合并](#字典合并)
   - [列表推导式](#列表推导式)
   - [zip分配生成dict](#zip分配生成dict)
-  - [switch-case 写法](#switch-case 写法)
+  - [switch-case写法](#switch-case写法)
 
 - [**代码片段**](#代码片段)
   - [从右向左替换字符串](#从右向左替换字符串)
@@ -66,7 +66,7 @@ Windows
 
 
 
-#### 简易 HTTP Server
+#### 简易HTTPServer
 
 ```python
 # code
@@ -216,7 +216,7 @@ love peace
 
 
 
-#### join 连接
+#### join连接
 
 ```python
 # code
@@ -357,7 +357,7 @@ print(dict(zip('AABCD', xrange(5))))
 
 
 
-#### switch-case 写法
+#### switch-case写法
 
 ```python
 # code
