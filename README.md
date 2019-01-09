@@ -29,6 +29,7 @@
   - [列表推导式](#列表推导式)
   - [zip分配生成dict](#zip分配生成dict)
   - [switch-case写法](#switch-case写法)
+  - [Format自动解包](#Format自动解包)
 
 - [**代码片段**](#代码片段)
   - [从右向左替换字符串](#从右向左替换字符串)
@@ -373,6 +374,19 @@ print(switch(1))
 
 # output
 <
+```
+
+
+
+#### Format自动解包
+
+```python
+# code
+t = [{'protocol': 'https'}, 'landgrey.me', '443']
+print("{0[0][protocol]}://{0[1]}:{0[2]}".format(t))
+
+# output
+https://landgrey.me:443
 ```
 
 
